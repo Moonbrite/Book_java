@@ -6,11 +6,26 @@ public class Book {
     private String title;
     private String isbn;
     private Author author;
+    private Long id;
+    public static Long compteur = 0L;
+
+
+
 
     public Book(String title, String isbn, Author author) {
         this.title = title;
         this.isbn = isbn;
         this.author = author;
+        id = ++compteur;
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Author getAuthor() {
